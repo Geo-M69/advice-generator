@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+:root {
+    --backgroundColor: #202733;
+    --containerColor: #313A48;
+    --adviceNumberColor: #53FFAA;
+    --adviceColor: #CEE3E9;
+    --lineColor: #4F5D74;
+    font-size: 13px;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--backgroundColor);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+main {
+    width: 40%;
+    height: 50%;
+    background-color: var(--containerColor);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advice-container {
+    width: 88%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#advice-number {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: var(--adviceNumberColor);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+}
+
+#advice {
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    color: var(--adviceColor);
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 2.15rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.divider {
+    width: 100%;
+    display: flex;
+}
+
+.first-line {
+    width: 40%;
+    color: var(--lineColor);
+}
+
+.pause-button {
+    width: 10%;
+    display: flex;
+    margin-left: 2.5rem;
+}
+
+.bar {
+    width: .4rem;
+    height: 1rem;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.second-line {
+    width: 40%;
+    color: var(--lineColor);
+}
