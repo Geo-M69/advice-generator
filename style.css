@@ -16,6 +16,8 @@ body {
     justify-content: center;
     background-color: var(--backgroundColor);
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 main {
@@ -81,7 +83,6 @@ main {
     height: 7%;
     align-items: end;
     justify-content: center;
-    padding-left: .008vw;
 }
 
 .get-advice {
