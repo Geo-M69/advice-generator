@@ -1,21 +1,14 @@
-// Send GET request to Advice Slip API
-fetch('https://api.adviceslip.com/advice')
-  .then(response => response.json())
-  .then(data => {
-    // Extract slip object
-    const slip = data.slip;
+async function getAdvice() {
+  let randomNum = Math.floor(Math.random() * 100); // Generate a random number
+  let response = await fetch(`https://api.adviceslip.com/advice/${randomNum}`); // Add the random number as a query parameter
+  let data = await response.json();
+  let adviceNumber = data.slip.id;
+  let adviceText = data.slip.advice;
+  document.getElementById("advice-number").innerHTML = `ADVICE #${adviceNumber}`;
+  document.getElementById("advice").innerHTML = `&ldquo;${adviceText}&rdquo;`;
+}
 
-    // Extract advice and ID from slip object
-    const advice = slip.advice;
-    const number = slip.id;
 
-    // Replace div content with new consts.
-    var adviceNumber = document.getElementById("advice-number");
-    var adviceDiv = document.getElementById("advice");
-    adviceNumber.innerHTML = `ADVICE #${number}`;
-    adviceDiv.innerHTML = `&ldquo;${advice}&rdquo;`;
-
-    // Log advice and its number to console
-    console.log(`Advice #${number}: ${advice}`);
-  })
-  .catch(error => console.error(error));
+window.onload = function() {
+  getAdvice();
+}
