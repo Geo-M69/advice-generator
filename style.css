@@ -98,3 +98,36 @@ main {
     max-height: 100%;
     width: 1.7vw;
 }
+
+@media screen and (max-width: 767px) {
+    main {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    #advice-number {
+        font-size: 3.9vw;
+    }
+
+    #advice {
+        font-size: 4.5vw;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+    }
+
+    .divider-container {
+        width: 80%;
+        overflow: hidden;
+    }
+
+    .get-advice {
+        width: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .get-advice img {
+        width: 8.7vw;
+    }
+}
